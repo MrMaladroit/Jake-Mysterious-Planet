@@ -10,7 +10,7 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
-    public GameState currentGameState = GameState.menu;
+    public GameState currentGameState;
     public static GameManager instance;
 
     private void Awake()
@@ -20,10 +20,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+        currentGameState = GameState.menu;
+    }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("s"))
+        {
+            StartGame();
+        }
     }
     public void StartGame()
     {
+        PlayerController.instance.StartGame();
         SetGameState(GameState.inGame);
     }
 
@@ -41,15 +50,15 @@ public class GameManager : MonoBehaviour
     {
         if(newGameState == GameState.menu)
         {
-
+            currentGameState = GameState.menu;
         }
         else if(newGameState == GameState.inGame)
         {
-
+            currentGameState = GameState.inGame;
         }
         else if(newGameState == GameState.gameOver)
         {
-            
+            currentGameState = GameState.gameOver;
         }
     }
 }

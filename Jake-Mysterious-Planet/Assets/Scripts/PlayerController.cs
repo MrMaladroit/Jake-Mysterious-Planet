@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public LayerMask groundLayer;
+    public static PlayerController instance;
+
     [SerializeField]
     private float jumpForce = 25f;
     [SerializeField]
@@ -10,36 +13,52 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     private Animator animator;
+    private Vector3 playerStartingPosition;
+    
 
-    public LayerMask groundLayer;
-
+    public void StartGame()
+    {
+        animator.SetBool("isAlive", true);
+        this.transform.position = playerStartingPosition;
+    }
 
     private void Awake()
     {
+        instance = this;
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        playerStartingPosition = this.transform.position;
     }
 
-    private void Start()
-    {
-        animator.SetBool("isAlive", true);
-    }
 
     private void FixedUpdate()
     {
-        if(rigidBody.velocity.x < runningSpeed)
+        if(GameManager.instance.currentGameState == GameState.inGame)
         {
-            rigidBody.velocity = new Vector2(runningSpeed, rigidBody.velocity.y);
+            if(rigidBody.velocity.x < runningSpeed)
+            {
+                rigidBody.velocity = new Vector2(runningSpeed, rigidBody.velocity.y);
+            }
         }
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (GameManager.instance.currentGameState == GameState.inGame)
         {
-            Jump();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Jump();
+            }
+            animator.SetBool("isGrounded", isGrounded());
         }
-        animator.SetBool("isGrounded", isGrounded());
+        
+    }
+
+    public void Kill()
+    {
+        GameManager.instance.GameOver();
+        animator.SetBool("isAlive", false);
     }
 
     private void Jump()
