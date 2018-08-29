@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 435386}
   - component: {fileID: 5068320}
   - component: {fileID: 5891808}
+  - component: {fileID: 114672766447657768}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -168,3 +169,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186324}
   m_IsPrefabParent: 1
+--- !u!114 &114672766447657768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a753736bb26d54c9ecd83b52c8c09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 25
