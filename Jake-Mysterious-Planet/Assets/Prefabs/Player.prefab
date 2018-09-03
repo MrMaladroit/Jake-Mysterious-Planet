@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a753736bb26d54c9ecd83b52c8c09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 25
-  runningSpeed: 1.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  jumpForce: 25
+  runningSpeed: 1.5
