@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.GameOver();
         animator.SetBool("isAlive", false);
+        
     }
 
     private void Jump()

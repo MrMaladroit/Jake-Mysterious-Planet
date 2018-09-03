@@ -10,8 +10,12 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
-    public GameState currentGameState;
     public static GameManager instance;
+    public GameState currentGameState = GameState.menu;
+
+    public Canvas menuCanvas;
+    public Canvas inGameCanvas;
+    public Canvas gameOverCanvas;
 
     private void Awake()
     {
@@ -50,15 +54,22 @@ public class GameManager : MonoBehaviour
     {
         if(newGameState == GameState.menu)
         {
-            currentGameState = GameState.menu;
+            menuCanvas.enabled = true;
+            inGameCanvas.enabled = false;
+            gameOverCanvas.enabled = false;
         }
         else if(newGameState == GameState.inGame)
         {
-            currentGameState = GameState.inGame;
+            menuCanvas.enabled = false;
+            inGameCanvas.enabled = true;
+            gameOverCanvas.enabled = false;
         }
         else if(newGameState == GameState.gameOver)
         {
-            currentGameState = GameState.gameOver;
+            menuCanvas.enabled = false;
+            inGameCanvas.enabled = false;
+            gameOverCanvas.enabled = true;
         }
+        currentGameState = newGameState;
     }
 }

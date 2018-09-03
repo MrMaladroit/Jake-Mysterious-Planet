@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 422306}
   - component: {fileID: 6169470}
   - component: {fileID: 21239566}
+  - component: {fileID: 114475111598979504}
   m_Layer: 0
   m_Name: KillTrigger
   m_TagString: Untagged
@@ -110,3 +111,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153294}
   m_IsPrefabParent: 1
+--- !u!114 &114475111598979504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab676462131a2842a5c0bb4ac1a516b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
