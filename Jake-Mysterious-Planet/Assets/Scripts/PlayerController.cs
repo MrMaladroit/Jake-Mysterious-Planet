@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
         this.transform.position = playerStartingPosition;
     }
 
+    public float GetDistance()
+    {
+        float totalDistancedTraveled = Vector2.Distance(new Vector2(playerStartingPosition.x, 0), new Vector2(this.transform.position.x, 0));
+        return totalDistancedTraveled;
+    }
+
     private void Awake()
     {
         instance = this;
@@ -60,6 +66,10 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.GameOver();
         animator.SetBool("isAlive", false);
         
+        if(PlayerPrefs.GetFloat("highscore", 0) < this.GetDistance())
+        {
+            PlayerPrefs.SetFloat("highscore", this.GetDistance());
+        }
     }
 
     private void Jump()

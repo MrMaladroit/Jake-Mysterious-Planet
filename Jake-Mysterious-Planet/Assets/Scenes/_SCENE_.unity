@@ -122,6 +122,12 @@ RectTransform:
 Transform:
   m_PrefabParentObject: {fileID: 435386, guid: 62359dbec881e4a0a8ba81638de6e92a, type: 2}
   m_PrefabInternal: {fileID: 1012849923}
+--- !u!114 &280688539 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11419080, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
+    type: 2}
+  m_PrefabInternal: {fileID: 813936342}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &340417621
 Prefab:
   m_ObjectHideFlags: 0
@@ -207,7 +213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22452780, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22418452, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_SizeDelta.x
@@ -215,7 +221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418452, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22475198, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_SizeDelta.x
@@ -223,7 +229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22475198, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 146
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11422180, guid: 2bd63ae78076d4adb8476d8a3fe81277, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -479,7 +485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 129
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.x
@@ -487,7 +493,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 21
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
@@ -694,6 +700,10 @@ Canvas:
   m_PrefabParentObject: {fileID: 22345870, guid: 2bd63ae78076d4adb8476d8a3fe81277,
     type: 2}
   m_PrefabInternal: {fileID: 340417621}
+--- !u!1 &879122332 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125268, guid: 5e85a806ebb8c4eb28c23ba452832ffd, type: 2}
+  m_PrefabInternal: {fileID: 813936342}
 --- !u!224 &879122333 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22455458, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
@@ -704,6 +714,20 @@ Canvas:
   m_PrefabParentObject: {fileID: 22376564, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
     type: 2}
   m_PrefabInternal: {fileID: 813936342}
+--- !u!114 &879122337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879122332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24836132bc94b55468f09e4ad0b95c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsLabel: {fileID: 1296062228}
+  scoreLabel: {fileID: 2082162536}
+  highScoreLabel: {fileID: 280688539}
 --- !u!1001 &1012849923
 Prefab:
   m_ObjectHideFlags: 0
@@ -742,6 +766,11 @@ Prefab:
     - target: {fileID: 435386, guid: 62359dbec881e4a0a8ba81638de6e92a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672766447657768, guid: 62359dbec881e4a0a8ba81638de6e92a,
+        type: 2}
+      propertyPath: runningSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62359dbec881e4a0a8ba81638de6e92a, type: 2}
@@ -917,6 +946,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1296062228 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11438306, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
+    type: 2}
+  m_PrefabInternal: {fileID: 813936342}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!224 &1344452571 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22450498, guid: 6253ae2dfd52c459a825a39575bb3087,
@@ -981,6 +1016,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 1140837864}
   inGameCanvas: {fileID: 879122336}
   gameOverCanvas: {fileID: 868359930}
+  collectedCoins: 0
 --- !u!4 &1574319260
 Transform:
   m_ObjectHideFlags: 0
@@ -994,3 +1030,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2082162536 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11497500, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
+    type: 2}
+  m_PrefabInternal: {fileID: 813936342}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
