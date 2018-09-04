@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Canvas gameOverCanvas;
 
     public int collectedCoins = 0;
+    private bool isNewGame = true;
 
     private void Awake()
     {
@@ -26,7 +28,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentGameState = GameState.menu;
+        if(isNewGame == true)
+        {
+            currentGameState = GameState.menu;
+        }
+        else
+        {
+            currentGameState = GameState.inGame;
+        }
     }
 
     private void Update()
@@ -41,10 +50,17 @@ public class GameManager : MonoBehaviour
         PlayerController.instance.StartGame();
         SetGameState(GameState.inGame);
     }
+    
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+        isNewGame = false;
+    }
 
     public void GameOver()  
     {
         SetGameState(GameState.gameOver);
+
     }
 
     public void BackToMenu()

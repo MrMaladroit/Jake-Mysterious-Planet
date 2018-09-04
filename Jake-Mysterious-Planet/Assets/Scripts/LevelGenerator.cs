@@ -23,7 +23,7 @@ public class LevelGenerator : MonoBehaviour
         GenerateInitialPieces();
     }
 
-    private void GenerateInitialPieces()
+    public void GenerateInitialPieces()
     {
         for(int i = 0; i < 2; i++)
         {
@@ -58,5 +58,10 @@ public class LevelGenerator : MonoBehaviour
 
         pieces.Remove(oldestpiece);
         Destroy(oldestpiece.gameObject);
+    }
+
+    public void RemoveAllObjectsInPiecesList()
+    {
+        pieces.Clear();
     }
 }
