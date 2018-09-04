@@ -703,19 +703,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 311.5
+      value: 310.5306
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 128.32652
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 296.5
+      value: 292.89795
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 22.530611
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6253ae2dfd52c459a825a39575bb3087, type: 2}
@@ -1240,11 +1240,6 @@ Prefab:
     - target: {fileID: 435386, guid: 62359dbec881e4a0a8ba81638de6e92a, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672766447657768, guid: 62359dbec881e4a0a8ba81638de6e92a,
-        type: 2}
-      propertyPath: jumpForce
-      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62359dbec881e4a0a8ba81638de6e92a, type: 2}
