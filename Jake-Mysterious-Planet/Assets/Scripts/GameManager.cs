@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public Canvas gameOverCanvas;
 
     public int collectedCoins = 0;
-    private bool isNewGame = true;
 
     private void Awake()
     {
@@ -28,14 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if(isNewGame == true)
-        {
-            currentGameState = GameState.menu;
-        }
-        else
-        {
-            currentGameState = GameState.inGame;
-        }
+        currentGameState = GameState.menu;
     }
 
     private void Update()
@@ -54,7 +46,6 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
-        isNewGame = false;
     }
 
     public void GameOver()  
